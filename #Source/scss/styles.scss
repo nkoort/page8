@@ -1,0 +1,52 @@
+@import "null.scss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+
+input, button, a {
+	background: none;
+	color: #111;
+}
+.wrapper {
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+.container {
+}
+
+.header {
+		&__row {}
+		&__content {}
+}
+
+.body {
+}
+
+.block1 {
+		&__row {}
+		&__content {}
+}
+.block2 {
+		&__row {}
+		&__content {}
+}
+.block3 {
+		&__row {}
+		&__content {}
+}
+.block4 {
+		&__row {}
+		&__content {}
+}
+.block5 {
+		&__row {}
+		&__content {}
+}
+
+.footer {
+		&__row {}
+		&__content {}
+}
+
+
+
