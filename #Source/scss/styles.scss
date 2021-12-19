@@ -21,6 +21,7 @@ a {
 	@media (max-width: 920px) {
 		font-size: 0.8em;
 	}
+
 	@media (max-width: 830px) {
 		font-size: 0.6em;
 	}
@@ -75,8 +76,13 @@ a {
 			background-color: #90cae1;
 			cursor: pointer;
 		}
+
 		@media (max-width:490px) {
 			padding: 7px 10px;
+		}
+
+		@media (max-width:385px) {
+			padding: 3px 5px;
 		}
 	}
 
@@ -96,11 +102,13 @@ a {
 		@media (max-width: 490px) {
 			max-width: 100px;
 		}
+
 		@media (max-width:620px) {
 			&>span {
 				right: 0;
 				height: 100%;
 				width: 100%;
+
 				&:after {
 					content: 'Sotial';
 					position: absolute;
@@ -118,6 +126,19 @@ a {
 				}
 			}
 		}
+
+		@media (max-width:385px) {
+			&>span {
+
+				&:after {
+					content: 'Sotial';
+					padding: 8px 10px;
+					margin: 0 5px 0 0;
+					font-size: 1.3em;
+
+				}
+			}
+		}
 	}
 
 	&__top-right-sotials {
@@ -126,19 +147,19 @@ a {
 		height: 100%;
 
 		@media (max-width:620px) {
-			position: absolute;
-			top: -1000px;
-			right: 1000px;
-			max-width: 0px;
+			display: none;
 
 			&.active {
+				display: flex;
 				transition: 0.5s;
 				position: absolute;
 				justify-content: center;
 				align-items: center;
 				z-index: -1;
 				top: 100%;
+				right: 0;
 				max-width: 1000px;
+				max-height: 1000px;
 				background: #eceef4;
 				border-radius: 0 0 0 20px;
 			}
@@ -151,13 +172,15 @@ a {
 		height: 100%;
 		display: flex;
 		align-items: center;
+
 		@media (max-width:620px) {
 			&.active {
 				padding: 0 5px;
 				border: none;
 			}
 		}
-		
+
+
 
 		&>img {
 			max-width: 100%;
@@ -176,10 +199,11 @@ a {
 		&:last-child {
 			margin: 0 15px 0 0;
 			border-right: 1px solid #dee0e6;
+
 			@media (max-width:620px) {
 				&.active {
 					margin: 0;
-				border: none;
+					border: none;
 				}
 			}
 		}
@@ -208,6 +232,7 @@ a {
 			height: auto;
 			object-fit: cover;
 		}
+
 		&::after {
 			content: 'logo';
 			position: absolute;
@@ -231,7 +256,10 @@ a {
 		padding: 0px 20px 0 20px;
 		border-right: 1px solid #bcbec3;
 
-		&:hover {cursor: help;}
+		&:hover {
+			cursor: help;
+		}
+
 		&.address:hover {
 			&::after {
 				content: '';
@@ -319,10 +347,69 @@ a {
 		justify-content: space-between;
 	}
 
-	&__menu-line {}
+
+	&__menu-line {
+		display: flex;
+
+		@media (max-width:620px) {
+			&>span {
+				height: 100%;
+				padding: 0px 20px;
+				border-right: 1px solid #eceef4;
+				display: flex;
+				align-items: center;
+				position: relative;
+
+				&.active {
+					pad: 0px 5px;
+					background: #eceef4;
+				}
+				&:after {
+					content: 'Menu';
+					font-family: 'Open Sans';
+					font-size: 0.94em;
+					font-weight: 700;
+					color: #6d6e71;
+				}
+
+				&:hover:before {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					transform: translate(-50%, 0%);
+					width: 25px;
+					height: 4px;
+					background: #1faae2 no-repeat;
+					clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+				}
+
+				&.active:before {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					transform: translate(-50%, 0%);
+					width: 25px;
+					height: 4px;
+					background: #1faae2 no-repeat;
+					clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+					transform: rotate(90deg) translate(-50%, -150%);
+				}
+			}
+		}
+	}
 
 	&__menu-line-links {
 		display: flex;
+
+		@media (max-width:620px) {
+			display: none;
+
+			&.active {
+				display: flex;
+			}
+		}
 	}
 
 	&__menu-line-link {
@@ -333,6 +420,7 @@ a {
 		padding: 20px 20px;
 		border-left: 1px solid #eceef4;
 		position: relative;
+
 		&:hover:after {
 			content: '';
 			position: absolute;
@@ -343,23 +431,51 @@ a {
 			height: 8px;
 			background: #1faae2 no-repeat;
 			clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+			@media (max-width:620px) {
+				width: 25px;
+				height: 4px;
+			}
 		}
 
 		&:hover>a {
 			color: #1faae2;
 		}
+
 		@media (max-width: 830px) {
 			padding: 15px 10px;
+		}
+		@media (max-width: 620px) {
+			padding: 10px 5px;
+			font-size: 0.74em;
+		}
+		@media (max-width: 350px) {
+			padding: 12px 2px;
+			font-size: 0.7em;
 		}
 	}
 
 	&__menu-search {
 		display: flex;
 		align-items: center;
+
+		&.d-active {
+			display: none;
+		}
 	}
 
 	&__menu-search-logo {
 		margin: 0 10px 0 0;
+		&>img {
+			max-width: 100%;
+			height: auto;
+			object-fit: cover;
+			@media (max-width: 600px) {
+				max-width: 20px;
+				margin: 5px 0 0 0;
+			}
+		}
+		
 	}
 
 	&__menu-search-input {
@@ -413,4 +529,20 @@ a {
 	&__row {}
 
 	&__content {}
+}
+
+
+
+.header {
+	// &__top {display: none;}
+	// &__body {dis	play: none;}
+	// &__menu {display: none;}
+}
+
+.body {
+	display: none;
+}
+
+.footer {
+	display: none;
 }

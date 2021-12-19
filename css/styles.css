@@ -167,6 +167,11 @@ a {
     padding: 7px 10px;
   }
 }
+@media (max-width: 385px) {
+  .header__top-left-link {
+    padding: 3px 5px;
+  }
+}
 .header__top-left-link-logo {
   margin: 0 5px 0 0;
 }
@@ -209,6 +214,14 @@ a {
     color: #6d6e71;
   }
 }
+@media (max-width: 385px) {
+  .header__top-right > span:after {
+    content: "Sotial";
+    padding: 8px 10px;
+    margin: 0 5px 0 0;
+    font-size: 1.3em;
+  }
+}
 .header__top-right-sotials {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -220,12 +233,12 @@ a {
 }
 @media (max-width: 620px) {
   .header__top-right-sotials {
-    position: absolute;
-    top: -1000px;
-    right: 1000px;
-    max-width: 0px;
+    display: none;
   }
   .header__top-right-sotials.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     position: absolute;
@@ -237,7 +250,9 @@ a {
             align-items: center;
     z-index: -1;
     top: 100%;
+    right: 0;
     max-width: 1000px;
+    max-height: 1000px;
     background: #eceef4;
     border-radius: 0 0 0 20px;
   }
@@ -417,10 +432,78 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.header__menu-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 620px) {
+  .header__menu-line > span {
+    height: 100%;
+    padding: 0px 20px;
+    border-right: 1px solid #eceef4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+  }
+  .header__menu-line > span.active {
+    pad: 0px 5px;
+    background: #eceef4;
+  }
+  .header__menu-line > span:after {
+    content: "Menu";
+    font-family: "Open Sans";
+    font-size: 0.94em;
+    font-weight: 700;
+    color: #6d6e71;
+  }
+  .header__menu-line > span:hover:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+    width: 25px;
+    height: 4px;
+    background: #1faae2 no-repeat;
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  .header__menu-line > span.active:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+    width: 25px;
+    height: 4px;
+    background: #1faae2 no-repeat;
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    -webkit-transform: rotate(90deg) translate(-50%, -150%);
+            transform: rotate(90deg) translate(-50%, -150%);
+  }
+}
 .header__menu-line-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+@media (max-width: 620px) {
+  .header__menu-line-links {
+    display: none;
+  }
+  .header__menu-line-links.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 .header__menu-line-link {
   font-family: "Open Sans";
@@ -444,12 +527,30 @@ a {
   -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
           clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
+@media (max-width: 620px) {
+  .header__menu-line-link:hover:after {
+    width: 25px;
+    height: 4px;
+  }
+}
 .header__menu-line-link:hover > a {
   color: #1faae2;
 }
 @media (max-width: 830px) {
   .header__menu-line-link {
     padding: 15px 10px;
+  }
+}
+@media (max-width: 620px) {
+  .header__menu-line-link {
+    padding: 10px 5px;
+    font-size: 0.74em;
+  }
+}
+@media (max-width: 350px) {
+  .header__menu-line-link {
+    padding: 12px 2px;
+    font-size: 0.7em;
   }
 }
 .header__menu-search {
@@ -460,8 +561,23 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
+.header__menu-search.d-active {
+  display: none;
+}
 .header__menu-search-logo {
   margin: 0 10px 0 0;
+}
+.header__menu-search-logo > img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 600px) {
+  .header__menu-search-logo > img {
+    max-width: 20px;
+    margin: 5px 0 0 0;
+  }
 }
 .header__menu-search-input {
   font-family: "Open Sans";
@@ -469,4 +585,12 @@ a {
   line-height: 1.9em;
   font-weight: 300;
   color: #6d6e71;
+}
+
+.body {
+  display: none;
+}
+
+.footer {
+  display: none;
 }

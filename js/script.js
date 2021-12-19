@@ -11,3 +11,16 @@ $(document).ready(function() {
 		$('.span-sotial, .header__top-right-sotial, .header__top-right-sotials').toggleClass('active');
 	});
 });
+
+// span-menu
+
+$(document).ready(function() {
+	$('.span-menu').click(function(event) {
+		$('.span-menu, .header__menu-line-links, .header__menu-container').toggleClass('active');
+	});
+});
+$(document).ready(function() {
+	$('.span-menu').click(function(event) {
+		$('.header__menu-search').toggleClass('d-active');
+	});
+});
