@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 	$('.span-menu').click(function(event) {
-		$('.span-menu, .header__menu-line-links, .header__menu-container').toggleClass('active');
+		$('.span-menu, .header__menu-line,.header__menu-line-links, .header__menu-container').toggleClass('active');
 	});
 });
 $(document).ready(function() {
