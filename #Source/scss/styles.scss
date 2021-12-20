@@ -18,10 +18,12 @@ a {
 	max-width: 1165px;
 	margin: 0 auto;
 
-	@media (max-width: 950px) {
+	@media (max-width: 920px) {
 		font-size: 0.8em;
 	}
-
+	@media (max-width: 850px) {
+		font-size: 0.7em;
+	}
 	@media (max-width: 830px) {
 		font-size: 0.6em;
 	}

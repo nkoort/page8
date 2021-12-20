@@ -96,9 +96,14 @@ a {
   max-width: 1165px;
   margin: 0 auto;
 }
-@media (max-width: 950px) {
+@media (max-width: 920px) {
   .container {
     font-size: 0.8em;
+  }
+}
+@media (max-width: 850px) {
+  .container {
+    font-size: 0.7em;
   }
 }
 @media (max-width: 830px) {
