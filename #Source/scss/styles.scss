@@ -581,18 +581,6 @@ a {
 .body {}
 
 .block1 {
-
-	// position: relative;
-	// &__background {
-	// 	position: absolute;
-	// 	z-index: -1;
-	// 	&>img {
-	// 		width: 100%;
-	// 		height: auto;
-	// 		max-height: 885px;
-	// 		object-fit: cover;
-	// 	}
-	// }
 	&__row {
 		background: url("../img/block1_background.png") no-repeat;
 		background-position: center;
