@@ -487,19 +487,45 @@ a {
 	}
 }
 
-.address {}
-
-.phone {}
-
-.mail {}
-
 .body {}
 
 .block1 {
-	&__row {}
-
-	&__content {}
+	// position: relative;
+	// &__background {
+	// 	position: absolute;
+	// 	z-index: -1;
+	// 	&>img {
+	// 		width: 100%;
+	// 		height: auto;
+	// 		max-height: 885px;
+	// 		object-fit: cover;
+	// 	}
+	// }
+	&__row {
+		background: url('../../img/block1_background.png') no-repeat;
+		background-position: center;
+		object-fit: contain;
+		background-size: 200% auto;
+	}
+	&__content {
+		min-height: 885px;
+		@media (max-width: 1000px) {
+			min-height: 600px;
+		}
+		@media (max-width: 800px) {
+			min-height: 500px;
+		}
+		@media (max-width: 600px) {
+			min-height: 400px;
+		}
+		@media (max-width: 400px) {
+			min-height: 300px;
+		}
+	}
 }
+.container {
+}
+
 
 .block2 {
 	&__row {}
@@ -531,18 +557,3 @@ a {
 	&__content {}
 }
 
-
-
-.header {
-	// &__top {display: none;}
-	// &__body {dis	play: none;}
-	// &__menu {display: none;}
-}
-
-.body {
-	display: none;
-}
-
-.footer {
-	display: none;
-}

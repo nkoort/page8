@@ -587,10 +587,33 @@ a {
   color: #6d6e71;
 }
 
-.body {
-  display: none;
+.block1__row {
+  background: url("../../img/block1_background.png") no-repeat;
+  background-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-size: 200% auto;
 }
-
-.footer {
-  display: none;
+.block1__content {
+  min-height: 885px;
+}
+@media (max-width: 1000px) {
+  .block1__content {
+    min-height: 600px;
+  }
+}
+@media (max-width: 800px) {
+  .block1__content {
+    min-height: 500px;
+  }
+}
+@media (max-width: 600px) {
+  .block1__content {
+    min-height: 400px;
+  }
+}
+@media (max-width: 400px) {
+  .block1__content {
+    min-height: 300px;
+  }
 }
