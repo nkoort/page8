@@ -114,72 +114,12 @@ a {
 			justify-content: center;
 			padding: 8px 0;
 		}
-
-		// @media (max-width: 490px) {   // Ниже представлен вариант с меню для социальных сетей, при умншении экрана они собираются в одну кнопку, которая затем при нажатии раскрывает выпливающий список.
-		// 	max-width: 100px;
-		// }
-
-		// @media (max-width:620px) {
-		// 	&>span {
-		// 		right: 0;
-		// 		height: 100%;
-		// 		width: 100%;
-
-		// 		&:after {
-		// 			content: 'Sotial';
-		// 			position: absolute;
-		// 			top: 50%;
-		// 			right: 0%;
-		// 			transform: translate(0%, -50%);
-		// 			padding: 7px 20px;
-		// 			margin: 0 10px 0 0;
-		// 			background-color: #fff;
-		// 			border-radius: 5px;
-		// 			font-family: 'Open Sans';
-		// 			font-size: 1.85em;
-		// 			font-weight: 700;
-		// 			color: #6d6e71;
-		// 		}
-		// 	}
-		// }
-
-		// @media (max-width:385px) {
-		// 	&>span {
-
-		// 		&:after {
-		// 			content: 'Sotial';
-		// 			padding: 8px 10px;
-		// 			margin: 0 5px 0 0;
-		// 			font-size: 1.3em;
-
-		// 		}
-		// 	}
-		// }
 	}
 
 	&__top-right-sotials {
 		display: flex;
 		align-items: center;
 		height: 100%;
-
-		// @media (max-width:620px) {  // относится к выплывающему меню через кнопку с софиальными сетями
-		// 	display: none;
-
-		// 	&.active {
-		// 		display: flex;
-		// 		transition: 0.5s;
-		// 		position: absolute;
-		// 		justify-content: center;
-		// 		align-items: center;
-		// 		z-index: -1;
-		// 		top: 100%;
-		// 		right: 0;
-		// 		max-width: 1000px;
-		// 		max-height: 1000px;
-		// 		background: #eceef4;
-		// 		border-radius: 0 0 0 20px;
-		// 	}
-		// }
 	}
 
 	&__top-right-sotial {
