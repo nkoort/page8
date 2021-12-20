@@ -120,6 +120,17 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media (max-width: 680px) {
+  .header__top-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .header__top-left {
   padding: 10px 0;
 }
@@ -175,40 +186,15 @@ a {
       -ms-flex-pack: end;
           justify-content: end;
 }
-@media (max-width: 490px) {
+@media (max-width: 680px) {
   .header__top-right {
-    max-width: 100px;
-  }
-}
-@media (max-width: 620px) {
-  .header__top-right > span {
-    right: 0;
-    height: 100%;
-    width: 100%;
-  }
-  .header__top-right > span:after {
-    content: "Sotial";
-    position: absolute;
-    top: 50%;
-    right: 0%;
-    -webkit-transform: translate(0%, -50%);
-            transform: translate(0%, -50%);
-    padding: 7px 20px;
-    margin: 0 10px 0 0;
-    background-color: #fff;
-    border-radius: 5px;
-    font-family: "Open Sans";
-    font-size: 1.85em;
-    font-weight: 700;
-    color: #6d6e71;
-  }
-}
-@media (max-width: 385px) {
-  .header__top-right > span:after {
-    content: "Sotial";
-    padding: 8px 10px;
-    margin: 0 5px 0 0;
-    font-size: 1.3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 8px 0;
   }
 }
 .header__top-right-sotials {
@@ -220,35 +206,9 @@ a {
           align-items: center;
   height: 100%;
 }
-@media (max-width: 620px) {
-  .header__top-right-sotials {
-    display: none;
-  }
-  .header__top-right-sotials.active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    position: absolute;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    z-index: -1;
-    top: 100%;
-    right: 0;
-    max-width: 1000px;
-    max-height: 1000px;
-    background: #eceef4;
-    border-radius: 0 0 0 20px;
-  }
-}
 .header__top-right-sotial {
   border-left: 1px solid #dee0e6;
-  padding: 0 15px;
+  padding: 0px 15px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -256,16 +216,11 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-@media (max-width: 620px) {
-  .header__top-right-sotial.active {
-    padding: 0 5px;
-    border: none;
-  }
+  min-height: 45px;
 }
 .header__top-right-sotial > img {
   max-width: 100%;
-  height: auto;
+  height: 25px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -281,15 +236,14 @@ a {
   margin: 0 15px 0 0;
   border-right: 1px solid #dee0e6;
 }
-@media (max-width: 620px) {
-  .header__top-right-sotial:last-child.active {
-    margin: 0;
-    border: none;
-  }
-}
 .header__body {
   padding: 60px 0;
   border-bottom: 1px solid #eceef4;
+}
+@media (max-width: 680px) {
+  .header__body {
+    padding: 15px 0;
+  }
 }
 .header__body-container {
   display: -webkit-box;
@@ -302,7 +256,7 @@ a {
       -ms-flex-align: end;
           align-items: flex-end;
 }
-@media (max-width: 490px) {
+@media (max-width: 680px) {
   .header__body-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -339,9 +293,9 @@ a {
   display: flex;
   position: relative;
 }
-@media (max-width: 490px) {
+@media (max-width: 680px) {
   .header__body-contacts-info {
-    margin: 15px 0 0 0;
+    padding: 20px 0 0 0;
   }
 }
 .header__body-contact {
@@ -365,6 +319,11 @@ a {
   top: -22px;
   left: 25px;
 }
+@media (max-width: 690px) {
+  .header__body-contact.address:hover::after {
+    top: 0px;
+  }
+}
 .header__body-contact.address:hover > div {
   display: block;
 }
@@ -379,6 +338,11 @@ a {
   top: -22px;
   left: 95px;
 }
+@media (max-width: 690px) {
+  .header__body-contact.phone:hover::after {
+    top: 0px;
+  }
+}
 .header__body-contact.phone:hover > div {
   display: block;
 }
@@ -392,6 +356,11 @@ a {
   position: absolute;
   top: -22px;
   left: 163px;
+}
+@media (max-width: 690px) {
+  .header__body-contact.mail:hover::after {
+    top: 0px;
+  }
 }
 .header__body-contact.mail:hover > div {
   display: block;
@@ -418,6 +387,12 @@ a {
   line-height: 35px;
   font-weight: 300;
   color: #6d6e71;
+  z-index: 99;
+}
+@media (max-width: 690px) {
+  .header__body-contacts-popup {
+    top: -40px;
+  }
 }
 .header__menu {
   -ms-grid-row: 3;

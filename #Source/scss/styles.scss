@@ -48,6 +48,12 @@ a {
 	&__top-container {
 		display: flex;
 		justify-content: space-between;
+
+		@media (max-width: 680px) {
+			flex-direction: column;
+			// justify-content: center;
+			align-items: center;
+		}
 	}
 
 	&__top-left {
@@ -101,46 +107,52 @@ a {
 		display: flex;
 		justify-content: end;
 
-		@media (max-width: 490px) {
-			max-width: 100px;
+		@media (max-width: 680px) {
+			display: flex;
+			justify-content: center;
+			padding: 8px 0;
 		}
 
-		@media (max-width:620px) {
-			&>span {
-				right: 0;
-				height: 100%;
-				width: 100%;
+		// @media (max-width: 490px) {   // Ниже представлен вариант с меню для социальных сетей, при умншении экрана они собираются в одну кнопку, которая затем при нажатии раскрывает выпливающий список.
+		// 	max-width: 100px;
+		// }
 
-				&:after {
-					content: 'Sotial';
-					position: absolute;
-					top: 50%;
-					right: 0%;
-					transform: translate(0%, -50%);
-					padding: 7px 20px;
-					margin: 0 10px 0 0;
-					background-color: #fff;
-					border-radius: 5px;
-					font-family: 'Open Sans';
-					font-size: 1.85em;
-					font-weight: 700;
-					color: #6d6e71;
-				}
-			}
-		}
+		// @media (max-width:620px) {
+		// 	&>span {
+		// 		right: 0;
+		// 		height: 100%;
+		// 		width: 100%;
 
-		@media (max-width:385px) {
-			&>span {
+		// 		&:after {
+		// 			content: 'Sotial';
+		// 			position: absolute;
+		// 			top: 50%;
+		// 			right: 0%;
+		// 			transform: translate(0%, -50%);
+		// 			padding: 7px 20px;
+		// 			margin: 0 10px 0 0;
+		// 			background-color: #fff;
+		// 			border-radius: 5px;
+		// 			font-family: 'Open Sans';
+		// 			font-size: 1.85em;
+		// 			font-weight: 700;
+		// 			color: #6d6e71;
+		// 		}
+		// 	}
+		// }
 
-				&:after {
-					content: 'Sotial';
-					padding: 8px 10px;
-					margin: 0 5px 0 0;
-					font-size: 1.3em;
+		// @media (max-width:385px) {
+		// 	&>span {
 
-				}
-			}
-		}
+		// 		&:after {
+		// 			content: 'Sotial';
+		// 			padding: 8px 10px;
+		// 			margin: 0 5px 0 0;
+		// 			font-size: 1.3em;
+
+		// 		}
+		// 	}
+		// }
 	}
 
 	&__top-right-sotials {
@@ -148,45 +160,37 @@ a {
 		align-items: center;
 		height: 100%;
 
-		@media (max-width:620px) {
-			display: none;
+		// @media (max-width:620px) {  // относится к выплывающему меню через кнопку с софиальными сетями
+		// 	display: none;
 
-			&.active {
-				display: flex;
-				transition: 0.5s;
-				position: absolute;
-				justify-content: center;
-				align-items: center;
-				z-index: -1;
-				top: 100%;
-				right: 0;
-				max-width: 1000px;
-				max-height: 1000px;
-				background: #eceef4;
-				border-radius: 0 0 0 20px;
-			}
-		}
+		// 	&.active {
+		// 		display: flex;
+		// 		transition: 0.5s;
+		// 		position: absolute;
+		// 		justify-content: center;
+		// 		align-items: center;
+		// 		z-index: -1;
+		// 		top: 100%;
+		// 		right: 0;
+		// 		max-width: 1000px;
+		// 		max-height: 1000px;
+		// 		background: #eceef4;
+		// 		border-radius: 0 0 0 20px;
+		// 	}
+		// }
 	}
 
 	&__top-right-sotial {
 		border-left: 1px solid #dee0e6;
-		padding: 0 15px;
+		padding: 0px 15px;
 		height: 100%;
 		display: flex;
 		align-items: center;
-
-		@media (max-width:620px) {
-			&.active {
-				padding: 0 5px;
-				border: none;
-			}
-		}
-
-
+		min-height: 45px;
 
 		&>img {
 			max-width: 100%;
-			height: auto;
+			height: 25px;
 			object-fit: cover;
 		}
 
@@ -201,19 +205,16 @@ a {
 		&:last-child {
 			margin: 0 15px 0 0;
 			border-right: 1px solid #dee0e6;
-
-			@media (max-width:620px) {
-				&.active {
-					margin: 0;
-					border: none;
-				}
-			}
 		}
 	}
 
 	&__body {
 		padding: 60px 0;
 		border-bottom: 1px solid #eceef4;
+
+		@media (max-width: 680px) {
+			padding: 15px 0;
+		}
 	}
 
 	&__body-container {
@@ -221,7 +222,7 @@ a {
 		justify-content: space-between;
 		align-items: flex-end;
 
-		@media (max-width:490px) {
+		@media (max-width:680px) {
 			flex-direction: column;
 			align-items: center;
 		}
@@ -253,8 +254,9 @@ a {
 	&__body-contacts-info {
 		display: flex;
 		position: relative;
-		@media (max-width:490px) {
-			margin: 15px 0 0 0;
+		
+		@media (max-width:680px) {
+			padding: 20px 0 0 0;
 			// justify-content: space-between;
 			// min-width: 320px;
 		}
@@ -282,6 +284,10 @@ a {
 				position: absolute;
 				top: -22px;
 				left: 25px;
+
+				@media (max-width: 690px) {
+					top: 0px;
+				}
 			}
 
 			&>div {
@@ -299,6 +305,10 @@ a {
 				position: absolute;
 				top: -22px;
 				left: 95px;
+
+				@media (max-width: 690px) {
+					top: 0px;
+				}
 			}
 
 			&>div {
@@ -316,6 +326,10 @@ a {
 				position: absolute;
 				top: -22px;
 				left: 163px;
+
+				@media (max-width: 690px) {
+					top: 0px;
+				}
 			}
 
 			&>div {
@@ -347,7 +361,11 @@ a {
 		line-height: 35px;
 		font-weight: 300;
 		color: #6d6e71;
-
+		z-index: 99;
+		
+		@media (max-width: 690px) {
+			top: -40px;
+		}
 	}
 
 	&__menu {
