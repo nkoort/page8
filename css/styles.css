@@ -588,7 +588,7 @@ a {
 }
 
 .block1__row {
-  background: url("./../img/block1_background.png") no-repeat;
+  background: url("../img/block1_background.png") no-repeat;
   background-position: center;
   -o-object-fit: contain;
      object-fit: contain;
