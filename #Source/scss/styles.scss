@@ -777,7 +777,7 @@ a {
 
 	&__row {
 		position: relative;
-		padding: 28px 0 0 0;
+		padding: 38px 0 100px 0;
 		overflow: hidden;
 
 		&::after {
@@ -798,16 +798,33 @@ a {
 		z-index: 2;
 		display: flex;
 		justify-content: center;
+		margin: 0 0 84px 0;
 	}
-	&__header-img {}
+	&__header-img {
+		margin: 0 32px 0 0;
+	}
 	&__header-body {
 		justify-content: flex-end;
 		display: flex;
 		flex-direction: column;
+		max-width: 340px;
 	}
-	&__header-body-title {}
-	&__header-body-subtitle {}
-	&__menu {}
+	&__header-body-title {
+		font-family: 'Open Sans';
+		font-size: 44px;
+		font-weight: 700;
+		color: #6d6e71;
+		margin: 0 0 6px 0;
+	}
+	&__header-body-subtitle {
+		font-family: 'Open Sans';
+		font-size: 17px;
+		font-weight: 300;
+		color: #6d6e71;
+	}
+	&__menu {
+		margin: 0 0 50px 0;
+	}
 	&__mmenu-links {
 		display: flex;
 		justify-content: center;
@@ -827,9 +844,16 @@ a {
 
 		&.active {
 			background: #fff;
+			color: #111;
 		}
 		&:last-child {
 			margin: 0;
+		}
+		&:hover {
+			transition: 0.5s;
+			cursor: pointer;
+			background: #8f8f8f;
+			color: #111;
 		}
 	}
 	&__items {
@@ -845,6 +869,13 @@ a {
 		flex-direction: column;
 		align-items: center;
 		width: 278px;
+
+		display: none;
+
+		&.active {
+			display: flex;
+		}
+
 	}
 	&__item-img {
 		max-width: 253px;
@@ -867,17 +898,63 @@ a {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+		&:hover>img {
+			transition: 0.5s;
+			background: #efefef;
+			border-radius: 10px;
+			padding: 10px;
+		}
+
 	}
 	&__item-links-right {
 		flex: 1 1 50%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+		&:hover>img {
+			transition: 0.5s;
+			background: #efefef;
+			border-radius: 10px;
+			padding: 10px;
+		}
 	}
 }
-.test {
+
+
+.all .item{
 	display: none;
+	&.active {
+		display: flex;
+	}
 }
+.mobile .item {
+	display: none;
+	&.active {
+		display: flex;
+	}
+}
+.ident .item{
+	display: none;
+	&.active {
+		display: flex;
+	}
+}
+.interior .item{
+	display: none;
+	&.active {
+		display: flex;
+	}
+}
+.ui .item{
+	display: none;
+	&.active {
+		display: flex;
+	}
+}
+
+
 
 .footer {
 	font-size: 50px;
