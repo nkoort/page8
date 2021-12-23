@@ -859,7 +859,7 @@ a {
 	&__items {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: flex-start;
 	}
 	&__item {
 		background: #fff;
