@@ -635,6 +635,8 @@ a {
 }
 
 .block2 {
+	position: relative;
+	z-index: 1;
 	&__row {}
 	&__content {}
 	&__content-top {
@@ -774,23 +776,24 @@ a {
 
 .block3 {
 	background-color: #efefef;
+	position: relative;
+	z-index: 2;
 
 	&__row {
 		position: relative;
 		padding: 38px 0 100px 0;
-		overflow: hidden;
 
 		&::after {
 			content: '';
 			position: absolute;
-			top: -31px;
+			top: -25px;
 			left: 50%;
 			transform: translate(-50%,0%);
-			width: 2500px;
+			width: 100vw;
 			height: 50px;
-			z-index: 1;
+			z-index: 5;
 			background: #efefef;
-			clip-path: ellipse(50% 35% at 50% 50%);
+			clip-path: ellipse(50% 50% at 50% 50%);
 		}
 	}
 	&__header {
@@ -859,8 +862,9 @@ a {
 	&__items {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: flex-start;
+		justify-content: center;
 	}
+
 	&__item {
 		background: #fff;
 		margin: 0 6px 15px 6px;
@@ -903,7 +907,7 @@ a {
 			transition: 0.5s;
 			background: #efefef;
 			border-radius: 10px;
-			padding: 10px;
+			padding: 12px;
 		}
 
 	}
@@ -917,7 +921,7 @@ a {
 			transition: 0.5s;
 			background: #efefef;
 			border-radius: 10px;
-			padding: 10px;
+			padding: 12px;
 		}
 	}
 }

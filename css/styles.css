@@ -743,6 +743,10 @@ a {
   background-color: rgba(254, 235, 117, 0.9);
 }
 
+.block2 {
+  position: relative;
+  z-index: 1;
+}
 .block2__content-top {
   margin: 0 0 88px 0;
 }
@@ -906,25 +910,26 @@ a {
 
 .block3 {
   background-color: #efefef;
+  position: relative;
+  z-index: 2;
 }
 .block3__row {
   position: relative;
   padding: 38px 0 100px 0;
-  overflow: hidden;
 }
 .block3__row::after {
   content: "";
   position: absolute;
-  top: -31px;
+  top: -25px;
   left: 50%;
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
-  width: 2500px;
+  width: 100vw;
   height: 50px;
-  z-index: 1;
+  z-index: 5;
   background: #efefef;
-  -webkit-clip-path: ellipse(50% 35% at 50% 50%);
-          clip-path: ellipse(50% 35% at 50% 50%);
+  -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+          clip-path: ellipse(50% 50% at 50% 50%);
 }
 .block3__header {
   position: relative;
@@ -1014,9 +1019,9 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .block3__item {
   background: #fff;
@@ -1077,7 +1082,7 @@ a {
   transition: 0.5s;
   background: #efefef;
   border-radius: 10px;
-  padding: 10px;
+  padding: 12px;
 }
 .block3__item-links-right {
   -webkit-box-flex: 1;
@@ -1098,7 +1103,7 @@ a {
   transition: 0.5s;
   background: #efefef;
   border-radius: 10px;
-  padding: 10px;
+  padding: 12px;
 }
 
 .all .item {
