@@ -11,16 +11,16 @@
 // });
 
 
-// $(document).ready(function () {
-// 	$('.link').click(function (event) {
-// 		$('.link').toggleClass('active');
-// 	});
-// });
-// $(document).ready(function () {
-// 	$('.span-menu').click(function (event) {
-// 		$('.header__menu-search').toggleClass('d-active');
-// 	});
-// });
+$(document).ready(function () {
+	$('.span-menu').click(function (event) {
+		$('.header__menu-line-links, .header__menu-line').toggleClass('active');
+	});
+});
+$(document).ready(function () {
+	$('.span-menu').click(function (event) {
+		$('.header__menu-search').toggleClass('d-active');
+	});
+});
 
 
 $(document).ready(function () {
