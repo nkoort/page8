@@ -4,15 +4,12 @@
 // 	});
 // });
 
-// // span-sotial
-
 // $(document).ready(function () {
 // 	$('.span-sotial').click(function (event) {
 // 		$('.span-sotial, .header__top-right-sotial, .header__top-right-sotials').toggleClass('active');
 // 	});
 // });
 
-// span-menu
 
 // $(document).ready(function () {
 // 	$('.link').click(function (event) {
@@ -25,10 +22,6 @@
 // 	});
 // });
 
-// .mobile
-// .ident
-// .interior
-// .ui
 
 $(document).ready(function () {
 	$(".all").click(function () {
