@@ -455,16 +455,11 @@ a {
 			color: #1faae2;
 		}
 
-		// @media (max-width: 850px) {
-		// 	padding: 15px 20px;
-		// }
-
 		@media (max-width: 850px) {
 			padding: 0px 5px;
 			display: flex;
 			align-items: center;
 		}
-
 		@media (max-width: 650px) {
 			margin: 15px 0 15px 25px;
 
@@ -506,7 +501,6 @@ a {
 		}
 
 	}
-
 	&__menu-search-input {
 		font-family: 'Open Sans';
 		font-size: 1.05em;
